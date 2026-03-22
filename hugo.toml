@@ -1,0 +1,89 @@
+baseURL       = 'https://deechtejoao.me/'
+languageCode  = 'pt-BR'
+title         = 'Deechtejoao.me'
+theme         = 'hello-friend-ng'
+paginate      = 8
+enableRobotsTXT = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[taxonomies]
+  tag      = 'tags'
+  category = 'categories'
+  series   = 'series'
+
+[markup]
+  [markup.highlight]
+    noClasses          = false
+    lineNos            = true
+    lineNumbersInTable = true
+    tabWidth           = 2
+
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 4
+
+[params]
+  contentTypeName          = 'posts'
+  defaultTheme             = 'dark'
+  showMenuItemSeparator    = true
+  displayRSSButton         = true
+  disableReadOtherPosts    = false
+  enableSharingButtons     = true
+  enableGlobalLanguageMenu = false
+  homeSubtitle             = 'You only live once.'
+  dateform                 = 'Jan 2, 2006'
+  dateformShort            = 'Jan 2'
+  dateformNum              = '2006-01-02'
+  dateformNumTime          = '2006-01-02 15:04'
+  description              = 'Meu blog pessoal, escrevendo sobre minha curiosidade.'
+  keywords                 = 'blog, technology, programming'
+
+  [params.plausible]
+    dataDomain = 'deechtejoao.me'
+
+  [[params.social]]
+    name = 'github'
+    url  = 'https://github.com/deechtejoao'
+
+  [[params.social]]
+    name = 'twitter'
+    url  = 'https://twitter.com/deechtejoao'
+
+  [[params.social]]
+    name = 'email'
+    url  = 'mailto:deechtejoao@gmail.com'
+
+  [[params.social]]
+    name = 'rss'
+    url  = '/index.xml'
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name       = 'Home'
+    url        = '/'
+    weight     = 1
+
+  [[menu.main]]
+    identifier = 'posts'
+    name       = 'Posts'
+    url        = '/posts/'
+    weight     = 10
+
+  [[menu.main]]
+    identifier = 'tags'
+    name       = 'Tags'
+    url        = '/tags/'
+    weight     = 30
+
+  [[menu.main]]
+    identifier = 'about'
+    name       = 'About me'
+    url        = '/about/'
+    weight     = 40
+
